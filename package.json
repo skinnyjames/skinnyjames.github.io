@@ -15,5 +15,16 @@
   "bugs": {
     "url": "https://github.com/skinnyjames/seangregory.xyz/issues"
   },
-  "homepage": "https://github.com/skinnyjames/seangregory.xyz#readme"
+  "homepage": "https://github.com/skinnyjames/seangregory.xyz#readme",
+  "dependencies": {
+    "vue": "^2.5.16"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "vue-loader": "^14.2.2"
+  }
 }
