@@ -35,6 +35,9 @@ a.work-title:hover {
   width: 245px;
   height: 100%;
   padding: 0px 20px;
+  display: flex; 
+  justify-content: center;
+
 }
 #content {
   width: calc(100% - 245px);
@@ -46,11 +49,13 @@ section:hover {
   cursor: pointer;
 }
 .photo-container {
-  position: absolute;
+  //position: absolute;
   //margin-top: 20px;
   display: flex;
+  width: 230px;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 1em;
 }
 section {
   border: 1px solid #333;
@@ -115,4 +120,14 @@ section {
 }
 .close-lightbox:hover {
   cursor: pointer;
+}
+@media only screen and (max-width: 600px) {
+  #left-container, #content {
+    width: 100%;
+    justify-content: center;
+  } 
+  #container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
