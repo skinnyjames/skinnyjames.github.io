@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/skinnyjames/seangregory.xyz#readme",
   "dependencies": {
+    "js-yaml": "^3.11.0",
     "vue": "^2.5.16"
   },
   "devDependencies": {

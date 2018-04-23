@@ -7,8 +7,14 @@ html, body {
   height:100%;
 }
 a {
-  color: #8df4e5;
   text-decoration: none;
+}
+.title a {
+  color: #8df4e5;
+}
+a.work-title:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 .photo {
   background-color: white;
@@ -36,6 +42,14 @@ a {
   display: flex;
   flex-wrap: wrap;
 }
+section:hover {
+  cursor: pointer;
+  /*border: 6px solid #000;
+  width: 208px;
+  height: 208px;
+  */
+  font-weight: bold;
+}
 .photo-container {
   position: absolute;
   //margin-top: 20px;
@@ -48,8 +62,9 @@ section {
   width: 220px;
   height: 220px;
   margin: 10px;
-  color: #ccc;
+  color: #333;
   display: flex;
+  text-shadow: 1px 1px 2px #ccc;
   align-items: center;
   justify-content: center;
 }
@@ -72,6 +87,7 @@ section {
 }
 #lightbox {
   display: flex;
+  flex-direction: column;
   justify-content: center;  
   align-items: center;
   width: 100vw;
@@ -82,6 +98,15 @@ section {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(255,255,255,.9);
-  display: none;
+  background-color: rgba(0,0,0,.9);
+}
+.close-lightbox {
+  position: absolute; 
+  color: white;
+  top: 20px;
+  right: 20px;
+  font-size: 43px;
+}
+.close-lightbox:hover {
+  cursor: pointer;
 }

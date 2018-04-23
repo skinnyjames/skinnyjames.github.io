@@ -1,0 +1,10 @@
+-
+  title: Project Fiber
+  thumbnail: public/thumbnails/project-fiber.png
+  keywords: ['web', 'ui', 'database', 'sql']
+  router: video
+  content_type: video/webm
+  location: public/video/project-fiber.webm
+  caption: |
+    Project for Adams Telephone Cooperative
+

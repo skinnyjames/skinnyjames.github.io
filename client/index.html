@@ -1,8 +1,14 @@
+<!DOCTYPE html>
 <html>
+          <img :src="work.thumbnail">
   <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
 		<link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
     <link href="site.css" rel="stylesheet">
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="site.js"></script>
   </head>
   <body>
     <div id="container">
@@ -12,10 +18,44 @@
             <video width="200" height="200" autoplay loop muted>
               <source src="public/chew.mp4" type="video/mp4">
             </video>
+            <template v-if="activeLink">
+              <img  style="position:absolute;z-index:2;margin-bottom:-130px;margin-right:-130px" :src="activeLink.src">
+            </template>
           </div>
           <span class="name">Sean Christopher Gregory</span>
+						<span class="title">
+							<span v-for="link in links">
+								<a @mouseout="activeLink = null" @mouseover="activeLink = link" :href="link.href">{{link.title}}</a>
+							</span>
+						</span>
+          </span>
         </div>
+      </div><!-- end left container -->
+      <div id="content">
+        <section @click="activeWork = work" v-for="work in lifeWorks" :style="{'background-image': 'url(' + work.thumbnail + ')' }">
+          {{ work.title }}
+        </section>
+      </div>
+      <div id="lightbox" v-if="activeWork">
+        <span class="close-lightbox" @click="activeWork = null">&times;</span>
+        <template v-if="activeWork.router == 'video'">
+          <video height="70%" controls>
+            <source :src="activeWork.location" :type="activeWork.content_type">
+          </video>
+          <p style="color:white;">{{ activeWork.caption }}</p>
+        </template>
       </div>
     </div>
+    <script>
+      $(document).ready(function() {
+        Site.init({
+          el: '#container',  
+          links: [
+          { src: 'public/icons/github.png', href: 'http://github.com/skinnyjames', title: 'Github'},
+          { src: 'public/icons/resume.png', href: '/resume.pdf', title: 'Resume'},
+          ],
+        })
+      })
+    </script>
   </body>
 </html>
