@@ -4,7 +4,7 @@ module.exports = {
 		site: "./src/site.js"
   },
   output: {
-    path: path.resolve(__dirname, "site/client"),
+    path: path.resolve(__dirname, "client"),
     filename: "[name].js"
   },
   module: {
