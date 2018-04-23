@@ -6,5 +6,15 @@
   content_type: video/webm
   location: public/video/project-fiber.webm
   caption: |
-    Project for Adams Telephone Cooperative
+    Prototype for Adams Telephone Cooperative
+    <br>Built with Go and Elm
+-
+  title: Interactive Floorplan
+  thumbnail: public/thumbnails/floorplan.png
+  router: video
+  content_type: video/webm
+  location: public/video/floorplan.webm
+  caption: |
+    Interactive Floorplan for Adams Fiber
+    <br>Built with Adobe Animate and Illustrator
 

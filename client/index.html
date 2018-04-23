@@ -25,7 +25,7 @@
           <span class="name">Sean Christopher Gregory</span>
 						<span class="title">
 							<span v-for="link in links">
-								<a @mouseout="activeLink = null" @mouseover="activeLink = link" :href="link.href">{{link.title}}</a>
+								<a target="_blank" @mouseout="activeLink = null" @mouseover="activeLink = link" :href="link.href">{{link.title}}</a>
 							</span>
 						</span>
           </span>
@@ -33,16 +33,18 @@
       </div><!-- end left container -->
       <div id="content">
         <section @click="activeWork = work" v-for="work in lifeWorks" :style="{'background-image': 'url(' + work.thumbnail + ')' }">
-          {{ work.title }}
+          <span class="work-title">{{ work.title }}</span>
         </section>
       </div>
       <div id="lightbox" v-if="activeWork">
-        <span class="close-lightbox" @click="activeWork = null">&times;</span>
+        <div style='height:40px;'>
+          <span class="close-lightbox" @click="activeWork = null">&times;</span>
+        </div>
         <template v-if="activeWork.router == 'video'">
           <video height="70%" controls>
             <source :src="activeWork.location" :type="activeWork.content_type">
           </video>
-          <p style="color:white;">{{ activeWork.caption }}</p>
+          <p v-html="activeWork.caption" style="color:white;text-align-center;"></p>
         </template>
       </div>
     </div>
@@ -52,7 +54,7 @@
           el: '#container',  
           links: [
           { src: 'public/icons/github.png', href: 'http://github.com/skinnyjames', title: 'Github'},
-          { src: 'public/icons/resume.png', href: '/resume.pdf', title: 'Resume'},
+          { src: 'public/icons/resume.png', href: 'public/resume.pdf', title: 'Resume'},
           ],
         })
       })

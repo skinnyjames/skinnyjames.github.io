@@ -44,11 +44,6 @@ a.work-title:hover {
 }
 section:hover {
   cursor: pointer;
-  /*border: 6px solid #000;
-  width: 208px;
-  height: 208px;
-  */
-  font-weight: bold;
 }
 .photo-container {
   position: absolute;
@@ -69,6 +64,17 @@ section {
   justify-content: center;
 }
 
+.work-title{ 
+  display:flex;
+  width: 100%;
+  justify-content: center;
+  padding: .3em;
+  background-color:white;
+  color:black;
+  border-radius:3px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 2px 2px #333;
+}
 .name {
   margin: 10px 0;
   font-size: larger;
@@ -103,8 +109,8 @@ section {
 .close-lightbox {
   position: absolute; 
   color: white;
-  top: 20px;
-  right: 20px;
+  top: 10px;
+  right: 10px;
   font-size: 43px;
 }
 .close-lightbox:hover {
