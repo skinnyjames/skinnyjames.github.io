@@ -17,4 +17,21 @@
   caption: |
     Interactive Floorplan for Adams Fiber
     <br>Built with Adobe Animate and Illustrator
-
+-
+  title: Checkpoint Wordpress Plugin
+  thumbnail: public/thumbnails/checkpoint-wordpress.png
+  router: video
+  content_type: video/webm
+  location: public/video/checkpoint-wordpress.webm
+  caption: |
+    Wordpress Plugin built for Checkpoint Solutions.
+    <br>Built with PHP and Vue
+-
+  title: Tech Tip Animation (WiFi)
+  thumbnail: public/thumbnails/tech-tip-wifi.png
+  router: video
+  content_type: video/mp4
+  location: public/video/tech-tip-wifi.mp4
+  caption: |
+    Adams Expert's Tech Tip Animation
+    <br>Built with Adobe Animate
