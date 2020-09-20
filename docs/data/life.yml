@@ -35,3 +35,21 @@
   caption: |
     Adams Expert's Tech Tip Animation
     <br>Built with Adobe Animate
+- 
+  title: Dossier
+  thumbnail: public/thumbnails/dossier.png
+  router: video
+  content_type: video/webm
+  location: public/video/dossier.webm
+  caption: |
+    Reporting application for test reporting
+    <br>Built with Sinatra and Vue
+- 
+  title: Allegory
+  thumbnail: public/thumbnails/allegory.png
+  router: video
+  content_type: video/mp4
+  location: public/video/allegory.mp4
+  caption: |
+    Allegory by the Beast
+    <br>Built with Adobe Animate
